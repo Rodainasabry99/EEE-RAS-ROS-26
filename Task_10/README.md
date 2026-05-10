@@ -11,6 +11,9 @@ ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0
 <img width="499" height="539" alt="Screenshot from 2026-05-10 16-42-43" src="https://github.com/user-attachments/assets/571a722d-e32f-4dad-8e35-4f7e450db5e2" />
 
 A notes briefly explaining Nodes, Topics, and Services in your own words.
+
 Nodes: are small parts of a ROS 2 system,Each node performs a specific task in the program
+
 Topics: are communication channels used by nodes to exchange information
+
 Services:are a communication method where a node sends a request and receives a response.
