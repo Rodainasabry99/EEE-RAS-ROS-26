@@ -23,20 +23,19 @@ class Robot(Node):
     def publish_data(self):
 
         pose = Pose2D()
-        pose.x = self.x
-        pose.y = self.y
+        pose.x =float( self.x)
+        pose.y =float (self.y)
         pose.theta = 0.0
 
         priority_msg = Int32()
-        priority_msg.data = self.p
-
+        priority_msg.data =int(self.p)
+            
         self.pose_pub.publish(pose)
         self.priority_pub.publish(priority_msg)
-
         self.get_logger().info(
             f'{self.name}: ({self.x:.2f}, {self.y:.2f}) Priority={self.p}'
         )
-        
+
         self.x += 0.1
         self.y += 0.1
 
@@ -49,9 +48,9 @@ def main(args=None):
     if name == "robot_0":
         node = Robot("robot_0", 0.0, 0.0, 1)
     elif name == "robot_1":
-        node = Robot("robot_1", 0.3, 0.3, 5)
+        node = Robot("robot_1", 0.05, 0.05, 5)
     else:
-        node = Robot("robot_2", 5.0, 5.0, 2)
+        node = Robot("robot_2", 5, 5, 2)
 
     rclpy.spin(node)
 
@@ -60,8 +59,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
-
-
-        )
 
