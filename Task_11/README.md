@@ -6,3 +6,14 @@
 
 <img width="1025" height="701" alt="Screenshot from 2026-05-15 19-36-58" src="https://github.com/user-attachments/assets/6bb127ff-350c-44b6-ba04-8247deb5fc58" />
 
+__________________________________________________________________________________________________________________________________________________
+NOTES:
+Each robot publishes its position and priority on two separate topics. Since these two streams are not synchronized, I handled it by always storing the latest received values for each robot.
+
+In the traffic manager, I keep two dictionaries to store the latest position and priority for all robots.
+
+A timer function is used to continuously check the updated data, calculate the distance between robots in real time, and decide the status.
+
+If two robots are too close and one has higher priority, a DANGER message is printed. Otherwise, the system shows CLEAR.
+
+
