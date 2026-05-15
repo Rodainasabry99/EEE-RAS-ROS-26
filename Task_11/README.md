@@ -8,6 +8,7 @@
 
 __________________________________________________________________________________________________________________________________________________
 NOTES:
+
 Each robot publishes its position and priority on two separate topics. Since these two streams are not synchronized, I handled it by always storing the latest received values for each robot.
 
 In the traffic manager, I keep two dictionaries to store the latest position and priority for all robots.
