@@ -17,4 +17,7 @@ A timer function is used to continuously check the updated data, calculate the d
 
 If two robots are too close and one has higher priority, a DANGER message is printed. Otherwise, the system shows CLEAR.
 
+___________________________________________________________________________________________________________________________________________________
+VIDEO:
 
+https://drive.google.com/drive/folders/1jZQfNC-qgmDz24Blifk8Y1gbTMyZvZQY?usp=drive_link
