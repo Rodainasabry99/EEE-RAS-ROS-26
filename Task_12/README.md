@@ -4,6 +4,7 @@
 
 _________________________________________________________________________________________________________________________
 
+
 NOTS
 
 Each robot publishes its position and priority using two separate topics. Since these messages do not arrive at exactly the same time, I store the latest position and priority of each robot.
