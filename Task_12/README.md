@@ -5,7 +5,7 @@
 _________________________________________________________________________________________________________________________
 
 
-NOTS
+NOTS:
 
 Each robot publishes its position and priority using two separate topics. Since these messages do not arrive at exactly the same time, I store the latest position and priority of each robot.
 
@@ -15,3 +15,6 @@ A timer runs periodically to compare the robots' positions, calculate the distan
 
 If the distance is less than the safety distance and another robot has a higher priority, the system prints a Danger message indicating which robot should yield. Otherwise, it prints Clear.
 ____________________________________________________________________________________________________________________________
+
+
+VIDEO:
