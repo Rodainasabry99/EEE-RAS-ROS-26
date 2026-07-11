@@ -1,5 +1,3 @@
-Gazebo Autonomous Robot Simulation
-
 
 Screenshot showing the robot inside the world
 <img width="1429" height="1018" alt="Screenshot from 2026-07-11 03-30-54" src="https://github.com/user-attachments/assets/a5701d2d-7c98-41f1-936d-19684fc74c00" />
