@@ -1,4 +1,4 @@
-                                                    Gazebo Autonomous Robot Simulation
+Gazebo Autonomous Robot Simulation
 
 
 Screenshot showing the robot inside the world
