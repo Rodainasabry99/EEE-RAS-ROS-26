@@ -118,19 +118,92 @@ A simple modification was made to the URDF file by changing the robot's blue mat
 <img width="1362" height="920" alt="Screenshot from 2026-07-13 00-33-21" src="https://github.com/user-attachments/assets/dc7ae37f-2d66-42e4-b475-1499115d021a" />
 
 ---
+## Exploring the System
+
+To better understand how the robot communicates within ROS 2, several commands were executed to inspect the active topics, monitor joint states, observe transform broadcasts, and generate the TF tree.
+
+---
+
+### Active Topics
+
+The following command was used to display all active ROS 2 topics:
+
+```bash
+ros2 topic list
+```
+
+**Output**
+
+<img width="904" height="161" alt="Screenshot from 2026-07-13 01-00-28" src="https://github.com/user-attachments/assets/bee86edc-02a0-489b-a48c-16ee0cca2f2a" />
 
 
-### ros topic list
+---
 
-<img width="904" height="161" alt="Screenshot from 2026-07-13 01-00-28" src="https://github.com/user-attachments/assets/3acfc6a6-6b0d-46f7-bf89-2de3912fd76a" />
+### Joint States (Before Moving)
+
+Before moving any robot joint, the current joint states were monitored using:
+
+```bash
+ros2 topic echo /joint_states
+```
+
+The output shows the initial positions of all movable joints.
+
+**Output**
+
+<img width="367" height="574" alt="Screenshot from 2026-07-13 01-28-24" src="https://github.com/user-attachments/assets/6e7eaee4-8c7c-40f8-a216-a7f41f993e38" />
+
+
+---
+
+### Joint States (After Moving)
+
+After adjusting the joints using the **Joint State Publisher GUI**, the same command was used again:
+
+```bash
+ros2 topic echo /joint_states
+```
+
+The published joint values changed according to the new joint positions.
+
+**Output**
+
+<img width="367" height="574" alt="Screenshot from 2026-07-13 01-35-24" src="https://github.com/user-attachments/assets/4bcef4f9-2209-44ce-a5ae-03b73254f19c" />
+
+
+---
+
+### Live Transform Broadcasts
+
+The transform frames published by the robot were monitored using:
+
+```bash
+ros2 topic echo /tf
+```
+
+This command displays the real-time transformations between the robot's coordinate frames.
+
+**Output**
+
+<img width="367" height="574" alt="Screenshot from 2026-07-13 01-37-30" src="https://github.com/user-attachments/assets/37e6979a-6f3a-46d1-bbfa-79f9f3d29ad7" />
+
+
+---
+
+### TF Tree Generation
+
+The complete TF tree was generated using:
+
+```bash
+ros2 run tf2_tools view_frames
+```
+
+This command generates a PDF that illustrates the relationship between all robot frames.
+
+**Output**
+
+<img width="1685" height="545" alt="Screenshot from 2026-07-13 00-34-45" src="https://github.com/user-attachments/assets/c25514b5-b80c-40c9-9b20-3cd81e0d63e9" />
 
 
 
-
-### TF Tree
-
-<img width="1685" height="545" alt="Screenshot from 2026-07-13 00-34-45" src="https://github.com/user-attachments/assets/17050977-c5ea-4b3c-af30-284b22de233b" />
-
-
-### Joint States
 
