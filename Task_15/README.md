@@ -17,6 +17,15 @@ This project demonstrates the fundamentals of robot modeling in ROS 2 using URDF
 - Modify the URDF model and verify the result in RViz.
 
 ---
+## Software and Tools
+
+- Ubuntu 24.04
+- ROS 2 Jazzy
+- RViz2
+- URDF Tutorial Package
+- TF2 Tools
+
+  ---
 
 ## Launch Command
 
@@ -25,7 +34,7 @@ ros2 launch urdf_tutorial display.launch.py model:=/home/$USER/Task_15/06-flexib
 ```
 
 ---
-# Robot Visualization
+##Robot Visualization
 
 The following image shows the robot successfully loaded and visualized in RViz.
 
@@ -182,15 +191,24 @@ The complete TF tree was generated using:
 ros2 run tf2_tools view_frames
 ```
 
-The generated TF tree illustrates the parent-child relationship between all robot frames.
+The generated TF tree illustrates the parent-child relationship between all robot frames and shows how the links are connected through their corresponding joints.
 
 **Output**
 
 <img width="1685" height="545" alt="Screenshot from 2026-07-13 00-34-45" src="https://github.com/user-attachments/assets/c25514b5-b80c-40c9-9b20-3cd81e0d63e9" />
 
+---
 
+## ROS 2 Nodes
+
+The following nodes were running during the visualization:
+
+- `robot_state_publisher`: Publishes robot transforms based on the URDF model.
+- `joint_state_publisher_gui`: Publishes joint states and allows manual joint movement.
+- `rviz2`: Visualizes the robot model and TF frames.
 
 ---
+
 
 ## Robot State Publisher
 
@@ -205,7 +223,7 @@ The generated TF tree illustrates the parent-child relationship between all robo
 ---
 ## URDF Modification
 
-A simple modification was made to the URDF file by changing the robot's blue material color. The robot was relaunched to verify the change in RViz.
+A simple modification was made to the URDF file by changing the blue material color to another color. The robot was relaunched to verify the visual change in RViz.
 
 ### Before Modification
 
@@ -217,6 +235,32 @@ A simple modification was made to the URDF file by changing the robot's blue mat
 <img width="1362" height="920" alt="Screenshot from 2026-07-13 00-33-21" src="https://github.com/user-attachments/assets/dc7ae37f-2d66-42e4-b475-1499115d021a" />
 
 ---
+## Video Demonstration
+
+A short video explaining:
+- How the robot was launched.
+- How links and joints are structured.
+- The TF tree and ROS 2 topics.
+- The role of robot_state_publisher and joint_state_publisher.
+- The URDF modification and its effect in RViz.
+
+[Video Link](ضعى رابط الفيديو هنا)
+
+---
+
 ## Conclusion
 
 This task provided practical experience with robot modeling using URDF in ROS 2. The robot was successfully visualized in RViz, its links, joints, and TF tree were explored, and a simple modification to the URDF model was verified through visualization.
+
+
+
+
+
+
+
+
+
+
+
+
+
