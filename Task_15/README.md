@@ -18,16 +18,6 @@ This project demonstrates the fundamentals of robot modeling in ROS 2 using URDF
 
 ---
 
-## Software and Tools
-
-- Ubuntu 24.04
-- ROS 2 Jazzy
-- RViz2
-- URDF Tutorial Package
-- TF2 Tools
-
----
-
 ## Launch Command
 
 ```bash
@@ -114,22 +104,33 @@ Publishes the transformations between all robot frames.
 `joint_state_publisher` publishes joint values to the `/joint_states` topic and allows moving movable joints using the GUI.
 
 ---
-
 ## URDF Modification
 
-The original URDF model was modified by changing the robot's blue material color. After relaunching the robot, the new color was successfully displayed in RViz.
+A simple modification was made to the URDF file by changing the robot's blue material color. The robot was relaunched to verify the change in RViz.
+
+### Before Modification
+
+<img width="1362" height="920" alt="Screenshot from 2026-07-13 00-17-47" src="https://github.com/user-attachments/assets/d3d969c5-ad41-402c-8d22-3485809448eb" />
+
+
+### After Modification
+
+<img width="1362" height="920" alt="Screenshot from 2026-07-13 00-33-21" src="https://github.com/user-attachments/assets/dc7ae37f-2d66-42e4-b475-1499115d021a" />
 
 ---
 
-## Results
 
-### Robot Visualization
+### ros topic list
+
+<img width="904" height="161" alt="Screenshot from 2026-07-13 01-00-28" src="https://github.com/user-attachments/assets/3acfc6a6-6b0d-46f7-bf89-2de3912fd76a" />
+
 
 (الصورة)
 
 ### TF Tree
 
-(الصورة)
+<img width="1685" height="545" alt="Screenshot from 2026-07-13 00-34-45" src="https://github.com/user-attachments/assets/17050977-c5ea-4b3c-af30-284b22de233b" />
+
 
 ### Joint States
 
