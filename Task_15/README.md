@@ -25,6 +25,15 @@ ros2 launch urdf_tutorial display.launch.py model:=/home/$USER/Task_15/06-flexib
 ```
 
 ---
+# Robot Visualization
+
+The following image shows the robot successfully loaded and visualized in RViz.
+
+<img width="721" height="880" alt="Screenshot from 2026-07-13 01-57-16" src="https://github.com/user-attachments/assets/cd1fe8e5-1bdf-4425-b41c-66e987c2fb93" />
+
+
+
+---
 
 ## Robot Structure
 
@@ -93,31 +102,6 @@ Publishes the transformations between all robot frames.
 
 ---
 
-## Robot State Publisher
-
-`robot_state_publisher` reads the URDF model and publishes the robot transforms to the `/tf` topic according to the current joint states.
-
----
-
-## Joint State Publisher
-
-`joint_state_publisher` publishes joint values to the `/joint_states` topic and allows moving movable joints using the GUI.
-
----
-## URDF Modification
-
-A simple modification was made to the URDF file by changing the robot's blue material color. The robot was relaunched to verify the change in RViz.
-
-### Before Modification
-
-<img width="1362" height="920" alt="Screenshot from 2026-07-13 00-17-47" src="https://github.com/user-attachments/assets/d3d969c5-ad41-402c-8d22-3485809448eb" />
-
-
-### After Modification
-
-<img width="1362" height="920" alt="Screenshot from 2026-07-13 00-33-21" src="https://github.com/user-attachments/assets/dc7ae37f-2d66-42e4-b475-1499115d021a" />
-
----
 ## Exploring the System
 
 To better understand how the robot communicates within ROS 2, several commands were executed to inspect the active topics, monitor joint states, observe transform broadcasts, and generate the TF tree.
@@ -132,7 +116,7 @@ The following command was used to display all active ROS 2 topics:
 ros2 topic list
 ```
 
-**Output**
+**Terminal Output**
 
 <img width="904" height="161" alt="Screenshot from 2026-07-13 01-00-28" src="https://github.com/user-attachments/assets/bee86edc-02a0-489b-a48c-16ee0cca2f2a" />
 
@@ -147,7 +131,7 @@ Before moving any robot joint, the current joint states were monitored using:
 ros2 topic echo /joint_states
 ```
 
-The output shows the initial positions of all movable joints.
+The output shows the initial values of all movable joints before any interaction with the Joint State Publisher GUI.
 
 **Output**
 
@@ -164,7 +148,7 @@ After adjusting the joints using the **Joint State Publisher GUI**, the same com
 ros2 topic echo /joint_states
 ```
 
-The published joint values changed according to the new joint positions.
+The joint values changed after moving the sliders in the Joint State Publisher GUI, confirming that the robot state was updated successfully.
 
 **Output**
 
@@ -198,7 +182,7 @@ The complete TF tree was generated using:
 ros2 run tf2_tools view_frames
 ```
 
-This command generates a PDF that illustrates the relationship between all robot frames.
+The generated TF tree illustrates the parent-child relationship between all robot frames.
 
 **Output**
 
@@ -206,4 +190,33 @@ This command generates a PDF that illustrates the relationship between all robot
 
 
 
+---
 
+## Robot State Publisher
+
+`robot_state_publisher` reads the URDF model and publishes the robot transforms to the `/tf` topic according to the current joint states.
+
+---
+
+## Joint State Publisher
+
+`joint_state_publisher` publishes joint values to the `/joint_states` topic and allows moving movable joints using the GUI.
+
+---
+## URDF Modification
+
+A simple modification was made to the URDF file by changing the robot's blue material color. The robot was relaunched to verify the change in RViz.
+
+### Before Modification
+
+<img width="1362" height="920" alt="Screenshot from 2026-07-13 00-17-47" src="https://github.com/user-attachments/assets/d3d969c5-ad41-402c-8d22-3485809448eb" />
+
+
+### After Modification
+
+<img width="1362" height="920" alt="Screenshot from 2026-07-13 00-33-21" src="https://github.com/user-attachments/assets/dc7ae37f-2d66-42e4-b475-1499115d021a" />
+
+---
+## Conclusion
+
+This task provided practical experience with robot modeling using URDF in ROS 2. The robot was successfully visualized in RViz, its links, joints, and TF tree were explored, and a simple modification to the URDF model was verified through visualization.
