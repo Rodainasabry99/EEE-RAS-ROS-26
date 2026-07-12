@@ -125,7 +125,7 @@ A simple modification was made to the URDF file by changing the robot's blue mat
 <img width="904" height="161" alt="Screenshot from 2026-07-13 01-00-28" src="https://github.com/user-attachments/assets/3acfc6a6-6b0d-46f7-bf89-2de3912fd76a" />
 
 
-(الصورة)
+
 
 ### TF Tree
 
@@ -134,4 +134,3 @@ A simple modification was made to the URDF file by changing the robot's blue mat
 
 ### Joint States
 
-(الصورة)
