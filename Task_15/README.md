@@ -244,7 +244,7 @@ A short video explaining:
 - The role of robot_state_publisher and joint_state_publisher.
 - The URDF modification and its effect in RViz.
 
-[Video Link](ضعى رابط الفيديو هنا)
+[Video Link](https://drive.google.com/drive/folders/11pDhmsecrjKdpjHLE4G8mS1-299AuPum?usp=sharing)
 
 ---
 
